@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HeadOffice.TicketListFragment">
+
+    <!-- Header Level-->
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/small_card_black"
+        android:elevation="15dp">
+        <!--from & to date entry label-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="left"
+                    android:text="@string/from"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/small_card_style2">
+
+                    <EditText
+                        android:id="@+id/editTextStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:background="@color/textColorTitleLarge"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                        android:drawableTint="@color/colorPrimary"
+                        android:editable="false"
+                        android:textColor="@color/textColorTitleSmall"
+                        android:textColorHint="@color/textColorTitleSmall"
+                        android:textSize="@dimen/textSize11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="5dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="left"
+                    android:text="@string/to"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|left"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/small_card_style2">
+
+                    <EditText
+                        android:id="@+id/editTextEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:background="@color/textColorTitleLarge"
+                        android:backgroundTint="@android:color/transparent"
+                        android:drawableLeft="@android:drawable/ic_menu_my_calendar"
+                        android:drawableTint="@color/colorPrimary"
+                        android:editable="false"
+                        android:textColor="@color/textColorTitleSmall"
+                        android:textColorHint="@color/textColorTitleSmall"
+                        android:textSize="@dimen/textSize11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="7dp"
+                android:layout_height="5dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center|left"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buttonSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shapelogin"
+                    android:text="@string/search"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbHorizontal="@android:color/transparent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <!-- Segment group-->
+            <info.hoang8f.android.segmented.SegmentedGroup
+                android:id="@+id/segmentedGroupSwitcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/capsul_box_style"
+                android:orientation="horizontal"
+                android:paddingTop="0dp"
+                segmentedgroup:sc_border_width="0dp"
+                segmentedgroup:sc_checked_text_color="#fff"
+                segmentedgroup:sc_corner_radius="5dp"
+                segmentedgroup:sc_tint_color="@color/colorPrimary">
+
+                <RadioButton
+                    android:id="@+id/radioButtonAll"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/all" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonOpen"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/open" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonResponded"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/responded" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAttended"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/attended" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonClosed"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/completed" />
+
+            </info.hoang8f.android.segmented.SegmentedGroup>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- Recycle view-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recylcerViewTicketList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="10dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-51dp" />
+
+</LinearLayout>

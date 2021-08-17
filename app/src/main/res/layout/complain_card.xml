@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="11dp"
+    android:layout_marginTop="11dp"
+    android:layout_marginRight="11dp"
+    android:background="@drawable/card_style"
+    android:clickable="true"
+    android:elevation="20dp"
+    android:orientation="horizontal"
+    android:padding="0dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/new_image"
+        android:visibility="gone" />
+    <!--Ticket No title label-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textViewTicketNoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/ticketNo"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSize14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewTicketNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/textViewTicketNoTitle"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/textColorTitleSmall"
+            android:textSize="@dimen/textSize14sp" />
+
+        <!--user name Label-->
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTicketNoTitle"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/textColorTitleSmall"
+            android:textSize="@dimen/textSize12sp" />
+        <!-- status title label-->
+
+        <TextView
+            android:id="@+id/textViewProblemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAddress"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Priority:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSize11sp"
+            android:textStyle="bold" />
+        <!-- status Label-->
+        <TextView
+            android:id="@+id/textViewProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewAddress"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/textViewProblemTitle"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize11sp" />
+        <!-- status title label-->
+        <TextView
+            android:id="@+id/textViewStatusTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewProblem"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Status:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSize11sp"
+            android:textStyle="bold" />
+        <!-- status Label-->
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewProblem"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/textViewProblemTitle"
+            android:text="Draft"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/textColorTitleSmall"
+            android:textSize="@dimen/textSize11sp" />
+
+        <TextView
+            android:id="@+id/textViewRegionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewStatusTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Region:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSize11sp"
+            android:textStyle="bold" />
+        <!-- status Label-->
+        <TextView
+            android:id="@+id/textViewRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewStatus"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Dhaka"
+            android:layout_toEndOf="@+id/textViewProblemTitle"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize11sp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_technician"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewRegionTitle">
+
+            <TextView
+                android:id="@+id/textView_technician_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="Technician:"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize11sp"
+                android:textStyle="bold"/>
+
+            <!-- status Label-->
+            <TextView
+                android:id="@+id/textView_technician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="user test"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize11sp" />
+
+        </LinearLayout>
+
+        <!--Date Label-->
+        <EditText
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/linearLayout_technician"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="1"
+            android:background="#ddd"
+            android:editable="false"
+            android:padding="0dp" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="10/02/2019"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/textColorTitleSmall"
+            android:textSize="@dimen/textSize11sp" />
+        <!--Loan Amount label-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/textViewLoanAmountTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="ABC"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/textColorTitleLarge"
+                android:textSize="@dimen/textSize11sp" />
+
+            <TextView
+                android:id="@+id/textViewloanAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="11dp"
+                android:layout_toEndOf="@+id/textViewLoanAmountTitle"
+                android:text="4000000 Tk"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/textSize11sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

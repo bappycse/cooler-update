@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    android:layout_marginTop="11dp"
+    android:background="@drawable/card_style"
+    android:elevation="20dp">
+
+    <!--Ticket No title label-->
+    <TextView
+        android:id="@+id/textViewTicketNoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/ticketNo"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSize14sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:id="@+id/textViewTicketNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="123dr"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize14sp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewTicketNoTitle"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/textViewShopNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/shopName"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/textViewTicketNoTitle"/>
+    <TextView
+        android:id="@+id/textViewShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="123dr"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewShopNameTitle"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewTicketNoTitle"/>
+
+    <!--user name Label-->
+    <TextView
+        android:id="@+id/textViewShopAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Jahidul Islam"
+        android:layout_marginLeft="5dp"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/textViewShopNameTitle"
+        android:textColor="@color/textColorTitleSmall"/>
+    <!-- status title label-->
+    <TextView
+        android:id="@+id/textViewStatusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Status:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textViewShopAddress"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold"/>
+    <!-- status Label-->
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Draft"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/textViewShopAddress"
+        android:layout_toRightOf="@+id/textViewStatusTitle"
+        android:layout_marginTop="3dp"/>
+    <!--Date Label-->
+    <EditText
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#ddd"
+        android:editable="false"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textViewStatus"/>
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10/02/2019"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"/>
+    <!--Loan Amount label-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/textViewLoanAmountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="ABC"
+            android:textColor="@color/textColorTitleLarge"
+            android:textSize="@dimen/textSize11sp"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/textViewloanAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="4000000 Tk"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize11sp"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/textViewLoanAmountTitle"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

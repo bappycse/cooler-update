@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_personal_info"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="@string/personalInfoTitle" />
+        <item
+            android:id="@+id/nav_stock_follow_up"
+            android:icon="@drawable/list_icon"
+            android:title="@string/stockFollowUp" />
+        <item
+            android:id="@+id/nav_ticket_follow_up"
+            android:icon="@drawable/ticket"
+            android:title="@string/ticketFollowUp" />
+        <item
+            android:id="@+id/nav_stock_requisition"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/stockRequisition"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_stock_requisition_list"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/requisitionList"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_complain_list"
+            android:icon="@android:drawable/stat_sys_warning"
+            android:title="@string/complainList" />
+    </group>
+
+    <item >
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="@string/logout" />
+        </menu>
+    </item>
+
+</menu>

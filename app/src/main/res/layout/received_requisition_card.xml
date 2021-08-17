@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginStart="11dp"
+    android:layout_marginEnd="11dp"
+    android:layout_marginTop="11dp"
+    android:background="@drawable/card_style">
+
+
+    <TextView
+        android:id="@+id/textViewProductNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Product Name:"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/textViewRequisitionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/textViewProductNameTitle"/>
+
+    <TextView
+        android:id="@+id/requestQuantityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Quantity:"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@id/textViewProductNameTitle"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5sp"/>
+
+    <TextView
+        android:id="@+id/requestQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_toEndOf="@+id/requestQuantityTitle"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5sp"
+        android:layout_alignBaseline="@id/requestQuantityTitle"/>
+
+    <TextView
+        android:id="@+id/approvedQuantityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Approved Quantity:"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@id/requestQuantityTitle"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5sp"/>
+
+    <TextView
+        android:id="@+id/approvedQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_toEndOf="@id/approvedQuantityTitle"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5sp"
+        android:layout_alignBaseline="@id/approvedQuantityTitle"/>
+
+    <TextView
+        android:id="@+id/textViewProductNoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/requisitionNo"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/approvedQuantityTitle"/>
+
+    <TextView
+        android:id="@+id/textViewProductNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/app_name"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@+id/textViewProductNoTitle"
+        android:layout_below="@id/approvedQuantity"/>
+
+
+    <!-- status title label-->
+    <TextView
+        android:id="@+id/textViewOrderQtyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Product Quantity:"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/textViewProductNoTitle"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+    <!-- status Label-->
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Draft"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/textViewProductNoTitle"
+        android:layout_toEndOf="@+id/textViewOrderQtyTitle"
+        android:layout_marginTop="3dp"
+        android:visibility="gone"/>
+    <!-- status title label-->
+    <TextView
+        android:id="@+id/textViewStatusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Status: "
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/textViewOrderQtyTitle"
+        android:layout_marginTop="3dp"/>
+    <!-- status Label-->
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Draft"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/textViewOrderQtyTitle"
+        android:layout_toEndOf="@+id/textViewStatusTitle"
+        android:layout_marginTop="3dp"/>
+    <!--Date Label-->
+    <EditText
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#ddd"
+        android:editable="false"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewStatusTitle"
+        />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10/02/2019"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+    <!--Loan Amount label-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right">
+        <Button
+            android:id="@+id/buttonAction"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Action"
+            android:shadowColor="@android:color/transparent"
+            android:padding="0dp"
+            android:textSize="@dimen/textSize11sp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:elevation="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

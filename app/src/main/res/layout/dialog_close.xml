@@ -1,0 +1,258 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    android:layout_marginBottom="10sp">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/a"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close"
+            android:tint="@color/white" />
+    </RelativeLayout>
+    <!--Problem Type-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/relative">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/problemType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+
+                >
+                <!-- Ticket list-->
+                <LinearLayout
+                    android:id="@+id/linearOutTicketList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewProblemType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="left"
+                        android:text="Complain List:"
+                        android:textColor="@color/textColorTitleSmall"
+                        android:textSize="@dimen/textSize12sp" />
+
+                    <EditText
+                        android:id="@+id/editTextProblemList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/problemType"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/small_card_style3"
+                        android:enabled="false"
+                        android:hint=""
+                        android:minHeight="40dp"
+                        android:padding="10dp"
+                        android:textColor="@color/textColorTitleSmall"
+                        android:textSize="@dimen/textSize14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/small_card_style3"
+                        android:visibility="gone">
+
+                        <Spinner
+                            android:id="@+id/spinnerProblemType"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:fitsSystemWindows="true"
+                            android:gravity="center"
+                            android:paddingLeft="0dp"
+                            android:paddingBottom="0dp"
+                            android:scrollbarSize="4dp"
+                            android:spinnerMode="dropdown"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- last feedback-->
+            <LinearLayout
+                android:id="@+id/layoutFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewLastFeedBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="left"
+                    android:text="History:"
+                    android:textColor="@color/textColorTitleSmall"
+                    android:textSize="@dimen/textSize12sp" />
+
+                <EditText
+                    android:id="@+id/editTextLastFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewLastFeedBack"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/small_card_style3"
+                    android:enabled="false"
+                    android:hint=""
+                    android:minHeight="40dp"
+                    android:padding="10dp"
+                    android:textColor="@color/textColorTitleSmall"
+                    android:textSize="@dimen/textSize14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutFeedback"
+                android:layout_marginStart="8dp"
+                android:gravity="left"
+                android:text="Feedback:"
+                android:textColor="@color/textColorTitleSmall"
+                android:textSize="@dimen/textSize12sp" />
+
+            <EditText
+                android:id="@+id/editTextNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/small_card_style3"
+                android:minHeight="40dp"
+                android:padding="10dp"
+                android:textColor="@color/textColorTitleSmall"
+                android:textSize="@dimen/textSize14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/buttonPending"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Pending"
+            android:textAllCaps="false"
+            android:textColor="@color/signupColor"
+            android:textSize="@dimen/textSize12sp" />
+
+        <Button
+            android:id="@+id/buttonNotResolve"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Unsolved"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearOut2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearOut"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonResolve"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Solved"
+            android:textAllCaps="false"
+            android:textColor="@color/darkgreen"
+            android:textSize="@dimen/textSize12sp" />
+
+        <Button
+            android:id="@+id/button_forward_work_shop"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Forward Workshop"
+            android:textAllCaps="false"
+            android:textColor="@color/darkgreen"
+            android:textSize="@dimen/textSize12sp" />
+    </LinearLayout>
+
+</RelativeLayout>

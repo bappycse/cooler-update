@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    android:layout_marginTop="11dp"
+    android:background="@drawable/card_style"
+    android:elevation="20dp">
+
+    <!--Ticket No title label-->
+    <TextView
+        android:id="@+id/textViewProductNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/productName"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/textSize14sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"/>
+    <TextView
+        android:id="@+id/textViewProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="123dr"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize14sp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewProductNameTitle"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/textViewQuantityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/quantity"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewProductNameTitle"/>
+    <TextView
+        android:id="@+id/textViewQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="123dr"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize12sp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewQuantityTitle"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/textViewProductNameTitle"/>
+
+    <!--user name Label-->
+
+    <!--Date Label-->
+    <EditText
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="#ddd"
+        android:editable="false"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/textViewQuantity"/>
+    <TextView
+        android:id="@+id/textViewCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Products"
+        android:textColor="@color/textColorTitleSmall"
+        android:textSize="@dimen/textSize11sp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"/>
+    <!--Loan Amount label-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/textViewLoanAmountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="ABC"
+            android:textColor="@color/textColorTitleLarge"
+            android:textSize="@dimen/textSize11sp"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/textViewloanAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="4000000 Tk"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/textSize11sp"
+            android:layout_marginRight="11dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/textViewLoanAmountTitle"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

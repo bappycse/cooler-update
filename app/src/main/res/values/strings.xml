@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Meghna Cooler</string>
+    <string name="title_activity_main">Personal Info</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="personalInfoTitle">Personal Info</string>
+    <string name="stockFollowUp">Stock Follow Up</string>
+    <string name="ticketFollowUp">Ticket Follow Up</string>
+    <string name="stockRequisition">Stock Requisition</string>
+    <string name="requisition">Requisition</string>
+    <string name="extraCost">Extra Cost</string>
+    <string name="stock">Stock</string>
+    <string name="stockRequisitionList">Stock Requisition List</string>
+    <string name="requisitionList">Requisition List</string>
+    <string name="complainList">Complain List</string>
+    <string name="logout">Logout</string>
+    <string name="add">Add</string>
+    <string name="reqItems">Requisition Items</string>
+    <string name="productName">Product Name</string>
+    <string name="requisitionNo">Requisition No:</string>
+    <string name="quantity">Quantity</string>
+    <string name="amount">Amount</string>
+    <string name="unitPrice">Unit Price</string>
+    <string name="costTitle">Cost Title</string>
+    <string name="action">Action</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="search">Search</string>
+    <string name="all">All</string>
+    <string name="open">Open</string>
+    <string name="responded">Responded</string>
+    <string name="attended">Attended</string>
+
+    <string name="accepted">Accept</string>
+    <string name="ongoing">On Going</string>
+    <string name="pending">Pending</string>
+
+    <string name="closed">Closed</string>
+    <string name="completed">Completed</string>
+    <string name="ticketNo">Ticket No:</string>
+    <string name="enterUserId">Enter User Id</string>
+    <string name="enterPassword">Enter Password</string>
+    <string name="shopName">Shop Name:</string>
+    <string name="shopAddress">Shop Address:</string>
+    <string name="shopContactPerson">Contact Person:</string>
+    <string name="shopMobileNo">Mobile No:</string>
+    <string name="ticketStatus">Ticket Status:</string>
+    <string name="supportDetails">Complain Details:</string>
+    <string name="personalInfo">Personal Info</string>
+    <string name="password">Password</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="old_pass">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="products">Products</string>
+    <string name="parts">Parts</string>
+    <string name="solved">Solved</string>
+    <string name="problemType">Complain List:</string>
+    <string name="workshopName">Workshop Name:</string>
+    <string name="workshopAddress">Workshop Address:</string>
+    <string name="workshopMobile">Workshop Phone:</string>
+    <string name="version">Version: 1.1.0</string>
+</resources>

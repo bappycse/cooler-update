@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_loan_submit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@drawable/backcooler"
+    tools:context=".Technician.RequisitionActivity">
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            >
+            <!--form-->
+            <LinearLayout
+                android:id="@+id/orderEntryForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_style"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="23dp"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                android:elevation="10dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/textViewRequisitionItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reqItems"
+                    android:textSize="@dimen/textSize14sp"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="11dp"
+                    android:visibility="invisible"/>
+
+<!--
+
+
+                &lt;!&ndash;Product Name&ndash;&gt;
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Select Inventory"
+                        android:textSize="@dimen/textSize12sp"
+                        android:textColor="@color/textColorTitleLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:background="@drawable/button_shape"
+                        android:layout_marginTop="4dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerDepoName"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:fitsSystemWindows="true"
+                            android:gravity="center"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="0dp"
+                            android:scrollbarSize="4dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                -->
+
+                <TextView
+                    android:id="@+id/req_inventory_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:padding="5sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:textSize="@dimen/textSize14sp"/>
+
+
+                <!--Product Name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/textViewProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/productName"
+                        android:textSize="@dimen/textSize12sp"
+                        android:textColor="@color/textColorTitleLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="8dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center|left"
+                        android:background="@drawable/button_shape"
+                        android:layout_marginTop="4dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerProductName"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:fitsSystemWindows="true"
+                            android:gravity="center"
+                            android:paddingBottom="0dp"
+                            android:paddingLeft="0dp"
+                            android:scrollbarSize="4dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--Quantity-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="4dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:id="@+id/textViewQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/quantity"
+                            android:textSize="@dimen/textSize12sp"
+                            android:textColor="@color/textColorTitleLarge"
+                            android:gravity="left"
+                            android:layout_marginLeft="8dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:background="@drawable/button_shape"
+                            android:layout_marginTop="4dp">
+                            <EditText
+                                android:id="@+id/editTextQuantity"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center|left"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="@dimen/textSize14sp"
+                                android:textColor="@color/textColorTitleLarge"
+                                android:textColorHint="@color/textColorTitleSmall"
+                                android:backgroundTint="@android:color/transparent"
+                                android:paddingLeft="10dp"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--Button Add-->
+                <Button
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/button_style"
+                    android:textSize="11sp"
+                    android:text="@string/add"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="33dp"
+                    android:elevation="15dp"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+
+
+            <!--list -->
+            <TextView
+                android:id="@+id/textViewOrderlistTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:textSize="@dimen/textSize14sp"
+                android:paddingLeft="5dp"
+                android:text="@string/requisitionList"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:visibility="gone"/>
+
+            <!--Layout View1-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+                <HorizontalScrollView
+                    android:id="@+id/horizontalView"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dip"
+                    android:layout_marginBottom="30dp"
+                    android:layout_below="@+id/textViewOrderlistTitle"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/box_style"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/layoutList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:visibility="gone">
+                        <!--1st label-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="11dp"
+                            android:layout_marginLeft="11dp">
+                            <!--1-->
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:background="@drawable/small_card_black">
+                                <TextView
+                                    android:id="@+id/textViewProductNameTitle"
+                                    android:layout_width="180dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/textSize12sp"
+                                    android:paddingLeft="5dp"
+                                    android:textStyle="bold"
+                                    android:text="@string/productName"
+                                    android:textColor="@color/white"/>
+                            </LinearLayout>
+                            <!--2-->
+                            <LinearLayout
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:background="@drawable/small_card_black"
+                                android:layout_marginLeft=".5dp">
+                                <TextView
+                                    android:id="@+id/textViewQuantityTitle"
+                                    android:layout_width="100dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/textSize12sp"
+                                    android:paddingLeft="5dp"
+                                    android:textStyle="bold"
+                                    android:text="@string/quantity"
+                                    android:textColor="@color/white"/>
+                            </LinearLayout>
+                            <!--3-->
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:background="@drawable/small_card_black"
+                                android:layout_marginLeft=".5dp">
+                                <TextView
+                                    android:id="@+id/textViewAction"
+                                    android:layout_width="70dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/textSize12sp"
+                                    android:paddingLeft="2dp"
+                                    android:textStyle="bold"
+                                    android:text="@string/action"
+                                    android:textColor="@color/white"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                            android:id="@+id/listViewRequisitionList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@android:color/transparent"
+                            android:dividerHeight="1dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="10dp">
+                        </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/buttonSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:shadowColor="@android:color/transparent"
+                android:padding="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/shapelogin"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
